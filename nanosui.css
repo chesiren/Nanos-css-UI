@@ -1,0 +1,379 @@
+/* || backgrounds */
+body {
+    font-family: 'Gothic A1';
+	font-weight: normal;
+    line-height: 26px;
+	color: white;
+}
+
+.bg1, .bg2, .bg3, .bg-green {
+	background-color: rgba(10, 10, 10, 0.5);
+    color: white; 
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+	.blur {
+		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px);  
+	}
+}
+
+.bg2 {
+	background-color: rgba(40, 40, 40, 0.5);
+}
+
+.bg3 {
+	background-color: rgba(80, 80, 80, 0.5);
+}
+
+.bg-green {
+	background-color: rgba(24, 41, 26, 0.5);
+}
+
+/* || button title */
+.button-title, .button-title:focus:not(.active), .button-title:active:not(.active) {
+	background: none;
+	outline: none;
+	padding: 0;
+	border: none;
+}
+
+.button-title {
+	cursor: pointer;
+	color: white;
+	line-height: 50px;
+	text-align: center;
+}
+
+.button-title.active {
+	color: rgb(216, 154, 0);
+}
+
+.button-title:disabled {
+	cursor: default;
+	color: rgb(144, 144, 144);
+}
+
+.button-title-label {
+	font-weight: bold;
+	font-size: large;
+	display: block;
+	margin: 0px 30px;
+	height: 100%;
+	position: relative;
+	top: 0%;
+}
+
+.button-title:active:not(:disabled) .button-title-label {
+	color: rgb(216, 154, 0);
+	top: 3px;
+}
+
+/* || slider */
+.slider {
+	-webkit-appearance: none;
+	width: 200px;
+	height: 15px;
+	background: white;
+	outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 35px;
+	background-color: grey; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(221, 221, 221), rgb(172, 172, 172));
+	cursor: pointer;
+	border: 1px solid grey;
+	border-radius: 3px;
+}
+
+.slider::-moz-range-thumb {
+	width: 15px;
+	height: 35px;
+	background-color: grey; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(221, 221, 221), rgb(172, 172, 172));
+	cursor: pointer;
+	border: 1px solid grey;
+	border-radius: 3px;
+}
+
+/* || tool tip */
+#tooltip-span {
+	display: none;
+	padding: 5px;
+	text-align: center;
+	color: black;
+	background-color: rgb(240, 240, 240);
+	border: 2px solid black;
+}
+#tooltip-span.active {
+	display: block;
+	position: fixed;
+	overflow: hidden;
+}
+
+/* || input text */
+.input-text {
+	border-radius: 3px;
+	outline:none;
+	padding:0;
+	background-color: rgb(208, 208, 208);
+	border: 2px solid rgb(208, 208, 208);
+	box-shadow:
+        0 0 0 1px black;
+}
+
+.input-text:hover, .input-text:focus {
+	border: 2px solid white;
+}
+
+.input-text:disabled {
+	color: rgb(40, 40, 40);
+	background-color: rgb(124, 124, 124);
+	border: 2px solid rgb(124, 124, 124);
+	box-shadow:
+        0 0 0 1px rgb(30, 30, 30);
+}
+
+/* || checkbox */
+.checkbox {
+	position: relative;
+	padding-left: 35px;
+	padding-top: 6px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: rgb(221, 221, 221);
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+/* On mouse-over checked, add a grey background color */
+.checkbox:hover input:checked ~ .checkmark, .checkbox:hover input ~ .checkmark {
+	background-color: rgb(162, 162, 162);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* || green, red, grey buttons */
+.green, .green:focus:not(:disabled), .green:active:not(:disabled) {
+	border-radius: 3px;
+	width: 100%;
+	margin: 4px 4px 4px 0;
+	text-align: center;
+	outline: none;
+	padding: 0;
+	border: 1px solid rgb(76, 129, 0);
+	box-shadow:
+        0 0 0 1px black;
+}
+
+.green {
+	background-color: green; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(67, 115, 0), rgb(50, 88, 0));
+	cursor: pointer;
+	height: 50px;
+	color: white;
+	line-height: 50px;
+}
+
+.green:disabled {
+	background-color: grey; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(91, 100, 87), rgb(71, 78, 68));
+	cursor: default;
+	color: rgb(144, 144, 144);
+	border: 1px solid rgb(101, 111, 96);
+	box-shadow:
+        0 0 0 1px rgb(30, 30, 30);
+}
+
+.green:hover:not(:disabled) {
+	background-color: lightgreen; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(68, 116, 0), rgb(72, 123, 0));
+}
+
+.green:active:not(:disabled) {
+	background-color: darkgreen; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(63, 108, 0), rgb(47, 83, 0));
+	border: none;
+}
+
+.red, .red:focus:not(:disabled), .red:active:not(:disabled) {
+	border-radius: 3px;
+	width: 100%;
+	margin: 4px 4px 4px 0;
+	text-align: center;
+	outline:none;
+	padding:0;
+	border: 1px solid rgb(210, 19, 19);
+	box-shadow:
+        0 0 0 1px black;
+}
+
+.red {
+	background-color: red; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(197, 17, 17), rgb(153, 11, 11));
+	cursor: pointer;
+	height: 50px;
+	color: white;
+	line-height:50px;
+}
+
+.red:disabled {
+	background-color: grey; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(131, 102, 102), rgb(105, 80, 80));
+	cursor: default;
+	color: rgb(144, 144, 144);
+	border: 1px solid rgb(135, 105, 105);
+	box-shadow:
+        0 0 0 1px rgb(30, 30, 30);
+}
+
+.red:hover:not(:disabled) {
+	background-color: lightred; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(222, 128, 128), rgb(235, 136, 136));
+	border: 1px solid rgb(236, 137, 137);
+}
+
+.red:active:not(:disabled) {
+	background-color: darkred; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(175, 100, 100), rgb(140, 78, 78));
+	border: none;
+}
+
+.grey, .grey:focus:not(:disabled), .grey:active:not(:disabled) {
+	border-radius: 3px;
+	outline:none;
+	padding:0;
+	border: 1px solid rgb(220, 220, 220);
+	box-shadow:
+        0 0 0 1px black;
+}
+
+.grey {
+	background-color: grey; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(221, 221, 221), rgb(172, 172, 172));
+	cursor: pointer;
+	width: 150px;
+	height: 50px;
+	color: black;
+	line-height:50px;
+}
+
+.grey:disabled {
+	background-color: grey; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(130, 130, 130), rgb(135, 135, 135));
+	cursor: default;
+	color: rgb(40, 40, 40);
+	border: 1px solid rgb(140, 140, 140);
+	box-shadow:
+        0 0 0 1px rgb(30, 30, 30);
+}
+
+.grey:hover:not(:disabled) {
+	background-color: lightgrey; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(221, 221, 221), rgb(235, 235, 235));
+	border: 1px solid rgb(245, 245, 245);
+}
+
+.grey:active:not(:disabled) {
+	background-color: darkgrey; /* For browsers that do not support gradients */
+	background-image: linear-gradient(rgb(206, 206, 206), rgb(163, 163, 163));
+	border: none;
+}
+
+.green-label,
+.red-label,
+.grey-label {
+	display: block;
+	margin: 0px 30px;
+	height: 100%;
+	position: relative;
+	top: 0%;
+}
+
+.green:active:not(:disabled) .green-label,
+.red:active:not(:disabled) .red-label,
+.grey:active:not(:disabled) .grey-label {
+	top: 3px;
+}
+
+/* || dropdown */
+.dropdown {
+	position: relative;
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.dropdown-content {
+	display: none;
+	background-color: rgb(40, 40, 40);
+	width: 150px;
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown a:hover {
+	background-color: rgb(50, 50, 50);
+}
+
+.dropdown a.active {
+	background-color: rgb(222, 163, 9);
+	color: black;
+}
+
+.show {
+	display: block;
+}

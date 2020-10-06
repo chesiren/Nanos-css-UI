@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+<link href="nanosui.css" rel="stylesheet">
+<style>
+body {
+	background: url('https://pbs.twimg.com/media/EWjJi4UXQAEEZsa?format=jpg&name=large');
+}
+</style>
+</head>
+<body>
+
+<div class="blur bg1">bg1 (ps: blur doesn't work on firefox or Internet explorer)</div><br>
+<div class="blur bg2">bg2</div><br>
+<div class="blur bg3">bg3</div><br>
+<div class="blur bg-green">bg-green</div><br>
+
+<button class="button-title active">
+	<span class="button-title-label">button-title active</span>
+</button>
+<button class="button-title" disabled>
+	<span class="button-title-label">button-title disabled</span>
+</button>
+<button class="button-title">
+	<span class="button-title-label">button-title</span>
+</button><br><br>
+
+<input type="range" class="slider" id="SliderInput" value="1" min="1" max="100" oninput="SliderOutput.value = SliderInput.value">
+<output id="SliderOutput">1</output>%<br><br>
+
+<div class="tooltip" style="width:200px;">
+    hover on me to show tooltip
+</div>
+<span id="tooltip-span">tooltip</span>
+
+<label for="input">input-text disabled</label>
+<input type="text" class="input-text" id="input" name="input" value="test" disabled>
+<label for="input2">input-text</label>
+<input type="text" class="input-text" id="input2" name="input2" value="test"><br><br>
+
+<label class="checkbox">checkbox checked
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+<label class="checkbox">checkbox
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label><br><br>
+ 
+<button class="green" style="width: 200px;" disabled>
+	<span class="green-label">green disabled</span>
+</button>
+<button class="green" style="width: 200px;">
+	<span class="green-label">green</span>
+</button><br><br>
+
+<button class="red" style="width: 200px;" disabled>
+	<span class="red-label">red disabled</span>
+</button>
+<button class="red" style="width: 200px;">
+	<span class="red-label">red</span>
+</button><br><br>
+
+<button class="grey" disabled>
+	<span class="grey-label">grey disabled</span>
+</button>
+<button class="grey">
+	<span class="grey-label">grey</span>
+</button><br><br>
+
+<div class="dropdown">
+  <button onclick="dropdown()" class="grey" id="me">dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#dropdown" class="a active">dropdown</a>
+    <a href="#a" class="a">a</a>
+    <a href="#b" class="a">b</a>
+  </div>
+</div>
+
+<p style="font-family: 'Gothic A1';">GothicA1</p>
+<p style="font-family: 'Poiret One';">PoiretOne</p>
+
+<script src="example.js"></script>
+
+</body></html>
